@@ -42,7 +42,3 @@ Copy node from the container:
 ``` 
 docker cp <container_id>:/usr/local/bin/node node
 ```
-
-### TODO
-* explain usage
-* explain Vagrant

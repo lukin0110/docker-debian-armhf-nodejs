@@ -5,3 +5,8 @@ FIX :)
 qemu: Unsupported syscall: 374
 qemu: Unsupported syscall: 374
 0 upgraded, 117 newly installed, 0 to
+
+
+### TODO
+* explain usage
+* explain Vagrant
