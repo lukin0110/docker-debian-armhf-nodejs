@@ -10,3 +10,5 @@ RUN \
     ./configure && \
     make && \
     make install
+
+WORKDIR /app

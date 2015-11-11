@@ -21,10 +21,10 @@ build-5.0.0:
 # Shell access to the container
 ##################################################################
 shell-base:
-	docker run -t -i lukin0110/debian-armhf-nodejs /bin/bash
+	docker run -t -i lukin0110/debian-armhf-nodejs-base /bin/bash
 
 shell-debian:
-	docker run -t -i resin/beaglebone-black-debian /bin/bash
+	docker run -t -i armhfbuild/debian:wheezy /bin/bash
 
 shell-0.12.7:
 	docker run -t -i lukin0110/debian-armhf-nodejs:0.12.7 /bin/bash

@@ -12,6 +12,9 @@ development Node.js applications on an `ARM` architecture.
 All images are derived from [armhfbuild/debian:wheezy](https://hub.docker.com/r/armhfbuild/debian/) and will build one
 specific version of node. It will download the source from the [Node distribution](https://nodejs.org/dist/) page.
 
+## Docker host
+Your docker host needs to support ARM emulation with [QEMU](http://wiki.qemu.org/Main_Page).
+
 ## Troubleshooting
 When your copy the `node` binary from the docker image and put it on an ARM device you might receive the following 
 error when your execute it:
@@ -29,3 +32,8 @@ Copy node from the container:
 ``` 
 docker cp <container_id>:/usr/local/bin/node node
 ```
+
+### TODO
+* explain usage
+* explain Vagrant with QEMU
+

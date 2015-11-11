@@ -17,3 +17,5 @@ RUN apt-get update && \
     apt-get install -y --force-yes wget build-essential python python-dev software-properties-common python-software-properties && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists
+
+VOLUME ["/app"]
