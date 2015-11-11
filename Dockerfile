@@ -8,7 +8,7 @@
 #
 
 FROM armhfbuild/debian:wheezy
-MAINTAINER Maarten Huijsmans <maarten.huijsmans@gmail.com>
+MAINTAINER Maarten Huijsmans <maarten@lukin.be>
 
 ENTRYPOINT ["/bin/bash", "-c"]
 CMD ["node"]

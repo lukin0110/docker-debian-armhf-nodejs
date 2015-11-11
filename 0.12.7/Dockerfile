@@ -1,5 +1,5 @@
 FROM lukin0110/debian-armhf-nodejs-base
-MAINTAINER Maarten Huijsmans <maarten.huijsmans@gmail.com>
+MAINTAINER Maarten Huijsmans <maarten@lukin.be>
 
 ENV NODE_VERSION 0.12.7
 
