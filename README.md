@@ -1,4 +1,4 @@
-# docker-ubuntu-armhf-nodejs
+# docker-debian-armhf-nodejs
 Docker images for Node.js development on Debian with an ARM architecture. It ensures that your development 
 environment is **consistent** with the ARM based IoT devices that will run the code.
 
