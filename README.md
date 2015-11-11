@@ -12,8 +12,16 @@ development Node.js applications on an `ARM` architecture.
 All images are derived from [armhfbuild/debian:wheezy](https://hub.docker.com/r/armhfbuild/debian/) and will build one
 specific version of node. It will download the source from the [Node distribution](https://nodejs.org/dist/) page.
 
-## Docker host
-Your docker host needs to support ARM emulation with [QEMU](http://wiki.qemu.org/Main_Page).
+## Docker host & ARM Emulation
+Your docker host needs to support ARM emulation with [QEMU](http://wiki.qemu.org/Main_Page). The base image includes 
+the amd64 version of `qemu-user-static`. This means you can build and run ARM containers on your 64bit machine, as 
+explained in [this post](https://groups.google.com/forum/#!msg/coreos-dev/YC-G_rVFnI4/ncS5bjxYWdc). On your host, you 
+need to install [qemu-arm-static](https://wiki.debian.org/QemuUserEmulation). Also, the following command must be 
+executed before building or running any ARM containers:
+
+```
+sudo sh -c 'echo ":arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm-static:" >/proc/sys/fs/binfmt_misc/register'
+```
 
 ## Troubleshooting
 When your copy the `node` binary from the docker image and put it on an ARM device you might receive the following 
@@ -35,5 +43,4 @@ docker cp <container_id>:/usr/local/bin/node node
 
 ### TODO
 * explain usage
-* explain Vagrant with QEMU
-
+* explain Vagrant
