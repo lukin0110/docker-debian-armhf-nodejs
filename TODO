@@ -1,0 +1,7 @@
+
+FIX :)
+  rename sgml-base shared-mime-info software-properties-common ucf
+  unattended-upgrades xdg-user-dirs xml-core xz-utils
+qemu: Unsupported syscall: 374
+qemu: Unsupported syscall: 374
+0 upgraded, 117 newly installed, 0 to

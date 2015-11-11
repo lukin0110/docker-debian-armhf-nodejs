@@ -8,8 +8,10 @@ If you're running Node.js on an ARM device you need to compile the `node` binary
 The difference between `x84` and `ARM` architecture may cause unexpected behaviour. These images allow you to 
 development Node.js applications on an `ARM` architecture.
 
+Available versions on [NodeSource](https://github.com/nodesource/distributions/tree/master/deb)
+
 ## Images
-All images are derived from [armhfbuild/debian:wheezy](https://hub.docker.com/r/armhfbuild/debian/) and will build one
+All images are derived from [armhfbuild/debian:jessie](https://hub.docker.com/r/armhfbuild/debian/) and will build one
 specific version of node. It will download the source from the [Node distribution](https://nodejs.org/dist/) page.
 
 ## Docker host & ARM Emulation
@@ -32,7 +34,7 @@ error when your execute it:
 ```
 
 This means that the `node` binary on the docker images was build with a newer version of gcc. These binaries are build
- on debian wheezy. You need to upgrade gcc on your device. More info about this issue: 
+ on debian jessie. You need to upgrade gcc on your device. More info about this issue: 
 ['GLIBCXX_3.4.20' not found ](http://askubuntu.com/questions/575505/glibcxx-3-4-20-not-found-how-to-fix-this-error) 
 and [libstdc-so-6-version-glibcxx-3-4-19-not-found](http://askubuntu.com/questions/306467/usr-lib-i386-linux-gnu-libstdc-so-6-version-glibcxx-3-4-19-not-found/306477#306477).
 

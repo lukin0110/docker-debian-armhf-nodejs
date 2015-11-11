@@ -35,7 +35,24 @@ RUN \
 ```
 But this didn't succeed :(
 
+```
+ENV NODE_VERSION 4.2.2
+
+RUN wget --no-check-certificate https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
+RUN \
+    tar -zxvf node-v$NODE_VERSION.tar.gz && \
+    cd node-v$NODE_VERSION && \
+    ./configure && \
+    make && \
+    make install
+```
+
 # Issues
 
 * https://github.com/OiNutter/node-build/issues/74
 * https://github.com/nodejs/node-v0.x-archive/issues/5622
+
+# Info
+
+* https://github.com/nodesource/docker-node
+* https://github.com/nodesource/distributions/tree/master/deb
