@@ -5,7 +5,7 @@ environment is **consistent** with the ARM based IoT devices that will run the c
 If you're running Node.js on an ARM device you need to compile the `node` binary for the ARM architecture. Some
  `npm` packages have C or C++ code embedded and they need to be compiled as well during installation. 
  
-This difference between `x84` and `ARM` architecture may cause unexpected behaviour. These images allow you to 
+The difference between `x84` and `ARM` architecture may cause unexpected behaviour. These images allow you to 
 development Node.js applications on an `ARM` architecture.
 
 ## Images
